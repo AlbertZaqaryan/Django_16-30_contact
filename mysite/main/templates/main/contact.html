@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<header>
+    <h1>Contact page</h1>
+    <a href="{% url 'index' %}"><button>Index</button></a>
+    <a href="{% url 'about' %}"><button>About</button></a>
+    <hr>
+</header>
+<body>
+    <div>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="user_name" id="" placeholder="Username">
+            <input type="text" name="user_email" id="" placeholder="Email">
+            <input type="text" name="user_phone" id="" placeholder="Phone">
+            <p>
+                <input type="text" name="user_review" id="" placeholder="Review" style="width: 400px; height: 200px;">
+            </p>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<header>
+    <h1>About page</h1>
+    <a href="{% url 'index' %}"><button>Index</button></a>
+    <a href="{% url 'contact' %}"><button>Contact</button></a>
+
+    <hr>
+</header>
+<body>
+    <div>
+        {% for i in about_list %}
+            <h3>{{ i.about }}</h3>
+            <hr>
+        {% endfor %}
+    </div>
+</body>
+</html>
